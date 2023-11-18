@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharkie</title>
+    <link rel="icon" href="./img/icons/light-dark mode.png" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/audio.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/models/world.class.js"></script>
+    <script src="js/models/drawable.class.js"></script>
+    <script src="js/models/movable-objects.class.js"></script>
+    <script src="js/models/statusbarhealth.class.js"></script>
+    <script src="js/models/statusbarcoin-class.js"></script>
+    <script src="js/models/statusbarpoisen.class.js"></script>
+    <script src="js/models/throwpoisen.class.js"></script>
+    <script src="js/models/throwbubble.class.js"></script>
+    <script src="js/models/background/bg-water.class.js"></script>
+    <script src="js/models/background/bg-fondo1.class.js"></script>
+    <script src="js/models/background/bg-fondo2.class.js"></script>
+    <script src="js/models/background/floor1.class.js"></script>
+    <script src="js/models/background/light.class.js"></script>
+    <script src="js/models/player.class.js"></script>
+    <script src="js/models/endboss.class.js"></script>
+    <script src="js/models/enemy-fish.class.js"></script>
+    <script src="js/models/enemy-jelly.class.js"></script>
+    <script src="js/models/coins.class.js"></script>
+    <script src="js/models/poisen.class.js"></script>
+    <script src="js/models/keyboard.class.js"></script>
+    <script src="js/models/level.class.js"></script>
+    <script src="js/models/levels/level1.js"></script>
+    <script src="js/game.js"></script>
+</head>
+
+<body>
+    <div id="mainmenu">
+        <div class="icon-div">
+            <a class="icon" id="controls" onclick="openControl()">
+                <svg class="icon-img" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960"
+                    width="24">
+                    <path d="M160-200q-33 0-56.5-23.5T80-280v-400q0-33 23.5-56.5T160-760h640q33 0 
+                        56.5 23.5T880-680v400q0 33-23.5 56.5T800-200H160Zm0-80h640v-400H160v400Zm160-40h320v-80H320v80ZM200-440h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 
+                        0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM200-560h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 
+                        0h80v-80h-80v80ZM160-280v-400 400Z" />
+                </svg>
+            </a>
+        </div>
+        <div id="heading">Sharkie</div>
+        <div class="button">
+            <a onclick="mainMenuStart()"><img class="start-button" src="./img/6.Botones/Start/4.png"></a>
+        </div>
+    </div>
+    <canvas id="canvas" width="720" height="480" style="display: none;"></canvas>
+
+
+    <div class="mobile-hud" id="mobile-hud" style="display: none;">
+        <div class="hud-shoot hud-none">
+            <button id="btn-shoot"><img src="./img/4. Marcadores/Poisen/Animada/2.png" alt="poisen" height="30px"
+                    width="30px"></button>
+            <button id="btn-bubble"><img src="./img/1.Sharkie/Bubble trap/Bubble.png" alt="bubble" height="30px"
+                    width="30px"></button>
+        </div>
+        <div>
+            <button id="btn-fullscreen" onclick="toggleFullscreen()">Fullscreen</button>
+            <button id="btn-audio" onclick="setAudio()">Mute</button>
+        </div>
+        <div class="hud-swim hud-none">
+            <button id="btn-up">↑</button>
+            <div>
+                <button id="btn-left">←</button>
+                <button id="btn-down">↓</button>
+                <button id="btn-right">→</button>
+            </div>
+        </div>
+    </div>
+    <div id="rotate">
+        <h1>Please Rotate your Screen</h1>
+        <img id="rotateScreenImage" src="./img/mobile-rotate.png" alt="">
+    </div>
+</body>
+
+</html>
